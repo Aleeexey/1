@@ -6,9 +6,9 @@ public class Xyz {
         int x = scan.nextInt();
         int y = scan.nextInt();
         int z = scan.nextInt();
-        System.out.println((x + y + z) / 3);
-        System.out.println(((x + y + z) / 3) / 2);
-        if ((((x + y + z) / 3) / 2)>3) {
+        System.out.println((x + y + z) / 3.0);
+        System.out.println(((x + y + z) / 3) / 2.0);
+        if ((((x + y + z) / 3.0) / 2.0)>3) {
             System.out.println("Программа выполнена корректно");
 
         }
