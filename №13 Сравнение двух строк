@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class String13 {
+    public static void main(String[] args) {
+        Scanner skan = new Scanner(System.in);
+        System.out.println("Введите любое слово или фразу: ");
+        String s = skan.nextLine();
+        System.out.println("Введите любое слово или фразу: ");
+        String a = skan.nextLine();
+        int len1 = s.length();
+        int len2 = a.length();
+        if (len1 == len2) {
+            System.out.println("Длины строк равны");
+        }
+else if (len1 > len2 ){
+            System.out.println(s);
+        }
+else if (len1 < len2){
+            System.out.println(a);
+        }
+    }
+}
+
+
