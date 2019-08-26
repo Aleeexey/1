@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Conv {
+    public static void main(String[] args) {
+        Scanner skan = new Scanner(System.in);
+        System.out.println("Введите любое число: ");
+        String s = skan.nextLine();
+            Integer x = Integer.valueOf(s);
+            Double y = new Double(x);
+            System.out.println(s);
+            System.out.println(x);
+            System.out.println(y);
+
+    }
+}
