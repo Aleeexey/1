@@ -1,0 +1,31 @@
+import java.io.*;
+
+public class Ei {
+    public static void main(String[] args) {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("T.txt"));
+            int lineCountReader = 0;
+            String s,b;
+            System.out.println("В файле следующие строки :\n");
+            while ((s=br.readLine()) !=null){
+                lineCountReader++;
+                System.out.println(s);
+            }
+            int lineCountWriter =0;
+            try (BufferedWriter fw = new BufferedWriter(new FileWriter("test.txt",false))) {
+                System.out.println("\nВведите новые данные : \n");
+                while (lineCountReader>lineCountWriter){
+                    b = read.readLine();
+                    b+="\r\n";
+                    fw.write(b);
+                    lineCountWriter++;
+                }
+            }
+            System.out.println("Файл обновлен");
+        }
+        catch(IOException exc){
+            System.out.println("Ошибка ввода-вывода: " + exc);
+        }
+    }
+}
