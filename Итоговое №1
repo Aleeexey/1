@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Itog_1 {
+
+    public static void main(String[] args) {
+        int[] binaryPow = new int[32];
+        for (int i = 0; i < binaryPow.length; i++) {
+            binaryPow[i] = (int) Math.pow(2, i);
+        }
+        System.out.println("Введите  число в бинарном формате: ");
+        Scanner sc = new Scanner(System.in);
+        String binary = sc.nextLine();
+        StringBuilder sb = new StringBuilder(binary);
+        String binaryReverse = sb.reverse().toString();
+        int result = 0;
+        for (int i = 0; i < binaryReverse.length(); i++) {
+            if (Integer.valueOf("" + binaryReverse.charAt(i)) == 1) {
+                result += binaryPow[i];
+            }
+        }
+        System.out.println("Число в десятичном формате:\n" + result);
+        sc.close();
+    }
+}
